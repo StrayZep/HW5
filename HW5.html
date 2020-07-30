@@ -1,0 +1,67 @@
+  <!-- 
+Assignment: Creating an Interactive Dynamic Table
+ Name:      Zepeng Wang
+ E-mail:    Zepeng_Wang@student.uml.edu
+ Data:      7/29/2020
+ Description: This web is creating an interactive dynamic multiplication table that accept userinput 
+ and calculate from at least -50 to 50 multiplication
+ write a fuction calulation() in js to calculate number in html and put result into table.
+              91.61 GUI Programming 1 at UMASS Lowell
+-->
+ <!--since we are going to use these code for the future assignment, I made the basic web as simpl
+   as possible-->
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <title>interactive dynamic multiplication table</title>
+ <!-- Link CSS file -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/HW5.css">
+</head>
+
+
+ <!--main part of this web-->
+<body>
+
+  <!-- this part is get the input for four var, wwhen user click submit, it the return the value to 
+    calculation() function, the algorithm part is in js -->
+
+        <div class="table_content">
+
+          <form onsubmit="return false">
+            <label>Please input the Starting Horizontal Number: </label>
+            <input type="number" name="h_start" id="h_start" value="-50"><br/>
+            <label>Please input the Ending Horizontal Number: </label>
+            <input type="number" name="h_end" id="h_end" value="50"><br/>
+            <label>Please input the Starting vertical Number: </label>
+            <input type="number" name="v_start" id="v_start" value="-50"><br/>
+            <label>Please input the Ending vertical Number: </label>
+            <input type="number" name="v_end" id="v_end" value="50"><br/><br/>
+            <input type="submit" value="SUBMIT " onclick="return calculation()">
+          </form>
+  <!-- I set the defalut value to -50 50 -50 50 , since this web was required to calculate this 
+  range at least -->
+
+        </div>
+
+        <br/>
+      </div>
+    </div>
+
+    <!-- show the multiplication table result -->
+    <div id="mult_table"></div>
+
+
+    <!-- make bottom more whitespace -->
+    <br /><br /> 
+
+    
+  <!-- link js file. -->
+  <script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type='text/javascript' src="js/HW5.js"></script>
+
+
+</body>
+</html>
