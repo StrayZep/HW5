@@ -21,12 +21,16 @@ function calculation()
   var v_start = Number(document.getElementById('v_start').value);
   var v_end = Number(document.getElementById('v_end').value);
 
+  // Keep input in the range between -50 and 50
   // alert user input number range when they input something bigger or smaller.
-  if (h_start < -50 || h_end > 50 || v_start < -50 || v_end > 50) 
-  {
-    alert("Please input number between -50 and 50.");
-    return;
-  }
+ if ((h_start < -50 || h_start > 50) ||
+        (h_end < -50 || h_end > 50) ||
+        (v_start < -50 || v_start > 50) ||
+        (v_end < -50 || v_end > 50)
+    ) {
+        alert("Please input number between -50 and 50.");
+        return;
+    }
   // this part is to make sure start number is small than end number, if not, swap them.
   if (h_start > h_end) 
   {
